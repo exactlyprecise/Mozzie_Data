@@ -4,3 +4,6 @@ https://www.google.com/maps/d/viewer?mid=1MCdrIThPQYNI_wFNHNN3RKk9b3nKgLJe&ll=1.
 
 For maps of stations:
 http://www.weather.gov.sg/climate-historical-daily
+
+NOTES:
+Ignore semakau data and sentosa island data.
