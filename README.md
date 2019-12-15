@@ -11,7 +11,9 @@ Ignore semakau data and sentosa island data.
 Possible useful links:
 
 https://github.com/ngbolin/DengAI
+
 Chinese paper on year window dengue prediction:
+
 https://www.biorxiv.org/content/biorxiv/early/2019/09/06/760702.full.pdf
 
 Google groups:
