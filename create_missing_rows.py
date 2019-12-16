@@ -1,5 +1,5 @@
-# Change 'newton.csv' in row 25 with appropriate csv,
-# Change 'filled_list.csv' to any name you like.
+# Change 'newton.csv' in with appropriate csv you want to fill empty rows with
+# Change 'filled_list.csv' to any name you like, this is the name of the ouput csv you want
 
 
 import csv
