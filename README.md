@@ -5,6 +5,10 @@ https://www.google.com/maps/d/viewer?mid=1MCdrIThPQYNI_wFNHNN3RKk9b3nKgLJe&ll=1.
 For maps of stations:
 http://www.weather.gov.sg/climate-historical-daily
 
+Statistics of population:
+
+https://www.singstat.gov.sg/find-data/search-by-theme/population/geographic-distribution/latest-data
+
 NOTES:
 Ignore semakau data and sentosa island data.
 
