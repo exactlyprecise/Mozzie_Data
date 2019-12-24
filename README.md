@@ -9,6 +9,9 @@ Statistics of population:
 
 https://www.singstat.gov.sg/find-data/search-by-theme/population/geographic-distribution/latest-data
 
+Conventions for model training and documentation:
+https://docs.google.com/document/d/14CumPA9qrzm4UgbWdu4Z207IkrD-B1KYKaRphHI6RTM/edit?usp=sharing
+
 NOTES:
 Ignore semakau data and sentosa island data.
 
