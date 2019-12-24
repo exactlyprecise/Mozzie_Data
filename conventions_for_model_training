@@ -1,12 +1,12 @@
 2010-2019 Test Train Split
 Train : Wk 522 to Wk 880
 Test: Wk 881 to Wk 1038
-Persistence Loss = 0.011244
+Persistence Loss =  0.226386048
 
 2000-2019 Test Train Split
 Train: Wk 1 to Wk 800
 Test: Wk 801 to Wk 1038
-Persistence Loss = 0.013614
+Persistence Loss = 0.38085484
 
 Loss: f(x,y) = 0.5*(x-y)^2
 
