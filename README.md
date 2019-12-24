@@ -38,3 +38,7 @@ datathon3-data/rainfall/_zeroes$PLACE.csv: just like combine place, but replacin
 datathon3-data/daily_tabulated_data.csv: combining the rainfall and temperature, daily
 
 datathon3-data/weekly_tabulated_data.csv: averaging over temperature, and rafall_zeroes
+
+weekly_labeled_data_deleted:
+removed temperature stations and rainfall stations: sentosa, pulau ubin, semakau, jurong-island
+khatib and tuas south: remove population (since they are zeros), but keep rainfall and temperature stations
