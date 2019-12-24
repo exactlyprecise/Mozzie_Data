@@ -1,0 +1,21 @@
+2010-2019 Test Train Split
+Train : Wk 522 to Wk 880
+Test: Wk 881 to Wk 1038
+Persistence Loss = 0.011244
+
+2000-2019 Test Train Split
+Train: Wk 1 to Wk 800
+Test: Wk 801 to Wk 1038
+Persistence Loss = 0.013614
+
+Loss: f(x,y) = 0.5*(x-y)^2
+
+Documentation of Architectures:
+
+Github main folder “Models”:
+Subfolder “Model_X” for each different architecture:
+Subfolder contains 3 items:
+“Arch_Description” text file containing description of type of network used 
+Python (or whatever you’re using) code for model
+Table containing top 30 losses and lags
+ 
