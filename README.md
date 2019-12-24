@@ -27,7 +27,11 @@ Dengue NEA site (but no past data):
 https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters
 
 Documents Explanation:
+
 datathon3-data/rainfall/_combined$PLACE$.csv: aggregating ranifall to temperature stations
+
 datathon3-data/rainfall/_zeroes$PLACE.csv: just like combine place, but replacing unknown parts with 0.
+
 datathon3-data/daily_tabulated_data.csv: combining the rainfall and temperature, daily
+
 datathon3-data/weekly_tabulated_data.csv: averaging over temperature, and rafall_zeroes
