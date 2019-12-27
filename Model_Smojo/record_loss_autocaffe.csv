@@ -1,0 +1,43 @@
+,,,,,,,,,,"Note: Not ordered according to loss, but rather by clustering similar tests together. "
+,,,,,,,,,,This is always trained on the difference network T+8 - T+0
+Loss,Solver-type,Perceptron,iters,Nn-size (Bottom layer),Layers,Train Lag,Test Lag,input,Input Size,Notes
+0.170876,Adam,tanh,10000,"8, 16","Single, double, triple",8,6,A0:A-4 dengue,4,"losses around the same, Adam best. Layers of NN don’t seem to matter."
+0.168,Adam,tanh,10000,"8,32,64",single,8,7,A0:A-3 dengue,3,
+0.166225,Adam,tanh,10000,"16, 32",double,8,7,A0:A-3 dengue,3,
+0.1651,Adam,tanh,10000,"8,16,32",triple,8,7,A0:A-3 dengue,3,
+0.164895,Adam,tanh,10000,"16,32,128","triple, double",8,8,A0:A-2 dengue,2,"The losses might seem lower for a smaller window, but the lag increases as window is smaller."
+0.17,Adam,tanh,10000,"8,16","triple,double",8,6,A0:A-5 dengue,5,The most number of window tried. Smaller Nn-size works better
+0.156,Adam,Relu,10000,16,"Triple, quad, double,single",5,6,A0:A-5 dengue,5,Train lag smaller and loss smaller than tanh. Layers don’t seem to matter too much
+0.157,Adam,Relu,10000,"16,8","Triple, quad",5,6,A0:A-4 dengue,4,
+0.157,Adam,Relu,10000,"16, 32","triple,quad",3,7,A0:A-3 dengue,3,Training and test lag went back up here.
+0.159,Adam,Relu,10000,16,quad,4,4,"A0:A-5 dengue, population",6,"Doesn’t seem to decrease loss much but low lag!! Tried again and it looks like a fluke, later lags around 6"
+0.156,Adam,Relu,10000,"16, 32","quint,triple",8,6,"A0:A-4 dengue, population",5,
+0.155,Adam,Relu,10000,"16,32,128","quad,quint,triple",8,7,"A0:-3 dengue, population",4,"Another try had train lag = 3, test lag = 6., slightly higher loss."
+0.14,Adam,Relu,10000,"16, 128, 64","quad, single, double, triple",5,5,"A0:-3 dengue, population, average over rainfall, average over temperature",6,"Huge imporvement, it seems the train lag is a bit unstable. Definitely not a fluke."
+0.157,"Adam,SGD",Relu,10000,"8, 128","triple, single",5,8,"A0:-3 dengue, population, average over temperature",5,"Same as above, but only temperature, no rainfall. It seems temperature data is less important."
+0.15,Adam,Relu,10000,"16,128,32","double,single",8,6,"A0:-3 dengue, population, average over rainfall",5,
+0.143,Adam,Relu,10000,"16,32","quad,triple,single",6,4,"A0:-2 dengue, population, average over rainfall, average over temperature",5,
+0.142,Adam,Relu,10000,"128,8","single,triple,double",8,6,"A0:-4 dengue, population, average over rainfall, average over temperature",7,
+0.142,Adam,Relu,10000,"16, 128, 64","quad,triple,single",3,5,"A0:-3 dengue, population, average over temperature. Training: Mean from T+7 to T+8",6,"Denoising the training label, t+7 to t+8"
+0.144,Adam,Relu,10000,"16, 8","quad, triple, double",3,4,"A0:-3 dengue, population, average over temperature. Training: Mean from T+6 to T+8",6,"Denoising the training label, t+6 to t+8"
+0.15,Adam,Relu,10000,"16,8","single,triple",8,6,"A0:-3 dengue, population, average over temperature. Training: Mean from T+5 to T+8",6,"Denoising the training label, t+ 5 to t+8"
+,,,,,,,,,,"Any data below this includes T0 as an input, since I figured out how to include it."
+0.132,Adam,Relu,10000,"64,16","single,triple",6,4,"A0:-5 dengue, population, average over rainfall, average over temperature",9,
+0.13,Adam,Relu,10000,"16,64","quad,double,single",3,3,"A0:-4 dengue, population, average over rainfall, average over temperature",8,
+0.133,Adam,Relu,10000,,,,,"A0:-4 dengue, population interpolated, average over rainfall, average over temperature",8,
+0.134,Adam,Relu,10000,"16, 128","double,single",3,3,"A0:-3 dengue, population, average over temperature",7,
+0.1355,Adam,Relu,10000,16,"triple,quint,double",3,3,"A0:-3 dengue, population, average over temperature. Training: Mean from T+7 to T+8",7,"Denoising the training label, t+7 to t+8"
+0.136,Adam,Relu,10000,16,"triple,single",8,6,"A0:-4 dengue, population, average over temperature. Training: Mean from T+7 to T+8",8,"Denoising the training label, t+7 to t+8"
+0.137,Adam,Relu,10000,"128,16,64","single,quad",6,4,"A0:-3 dengue, population, average over temperature. Training: Mean from T+6 to T+8",7,"Denoising the training label, t+6 to t+8"
+0.14,Adam,Relu,10000,16,triple,2,4,"A0:-4 dengue, population, average over rainfall 0:-4, average over temperature 0:-2",16,It seems that taking a window over temperature and rainfall is not too useful (or at least the raw window by itself)
+0.1362,Adam,Relu,10000,16,double,2,4,"A0:-4 dengue, population, average over rainfall 0:-3, average over temperature 0:-1",14,
+0.13,Adam,Relu,10000,"16,32","quint,double",3,3,"A0:-4 dengue, population, average over rainfall 0:-2, average over temperature 0:-2",12,Not too different from non-interpolated version
+0.131,Adam,Relu,10000,"128,32",single,3,4,"A0:-4 dengue, population, average over rainfall 0:-1, average over temperature 0:-1",10,
+0.16,SGD,Relu,10000,64,double,8,6,"A0:-4 dengue, everthing else",52,
+0.15,Adam,Relu,10000,8,double,8,7,"A0:-4 dengue, all population sizes (even with mean temperature and rainfall)",20,
+0.135,Adam,Relu,10000,32,triple,0,2,"A0:-4 degue, all temperature",21,A fluke it seems. Next smallest was 0.157
+0.155,Adam,Relu,10000,16,double,0,2,"A0:-4 dengue, all rainfall, temperature average, population average",23,
+0.128,Adam,Relu,10000,16,quint,3,3,"A0:-4 dengue, all population, rainfall average, temperature average, population average",22,"This seems like a fluke, but not too rare a fluke either. There are several slightly above 0.13 Can remove tengah population. Looks better than without the individual populations"
+0.133,Adam,Relu,10000,"16, 128",triple,3,4,"A0:-4 dengue, all population, rainfall average, temperature average, population average, admiralty rainfall",22,
+0.135,Adam,Relu,10000,"64,16",single,3,4,"A0:-4 dengue, rainfall average, temperature average, population average, admiralty rainfall",9,
+0.131,Adam,Relu,10000,16,quad,2,3,"A0:-4 dengue, all population, rainfall average, temperature average, population average, khatib seletar sembawang rainfall",22,
